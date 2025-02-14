@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Employee Time Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .btn {
+            background-color: blue;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+    <script>
+        function calculateNetSale(input) {
+            let row = input.parentElement.parentElement;
+            let grossSale = parseFloat(input.value) || 0;
+            let netSaleCell = row.cells[5].querySelector('input');
+            netSaleCell.value = (grossSale * 0.08).toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Employee Time Tracker</h1>
+    <p>Click the button below to access the time tracker.</p>
+    <a href="time-tracker.html" class="btn">Go to Time Tracker</a>
+</body>
+</html>

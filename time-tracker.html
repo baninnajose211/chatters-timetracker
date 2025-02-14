@@ -76,7 +76,7 @@
             let row = input.parentElement.parentElement;
             let grossSale = parseFloat(input.value) || 0;
             let netSaleCell = row.cells[5].querySelector('input');
-            netSaleCell.value = (grossSale * 0.92).toFixed(2);
+            netSaleCell.value = (grossSale * 0.8).toFixed(2);
         }
     </script>
 </head>
